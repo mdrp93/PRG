@@ -1,3 +1,4 @@
+package TresEnRayaApp;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -156,6 +157,7 @@ public class TresEnRayaGUI {
         gamePanel.setLayout(new GridLayout(3, 3));
         frame.add(gamePanel, BorderLayout.CENTER);
         frame.add(buttonDefaultPanel, BorderLayout.NORTH);
+        
         jugadorVSjugador(); 
         frame.revalidate();
         frame.repaint();
@@ -199,7 +201,7 @@ public class TresEnRayaGUI {
         frame.add(gamePanel, BorderLayout.CENTER);
         frame.add(buttonDefaultPanel, BorderLayout.NORTH);
 
-        inicializarBotones();
+        mvjugadorContraOrdenador();
         frame.revalidate();
         frame.repaint();
         JOptionPane.showMessageDialog(frame, "Jugador es X y Ordenador es O");
@@ -216,40 +218,43 @@ public class TresEnRayaGUI {
         JButton backButton = new JButton("Volver a modos"); // Crear el botón de volver atrás 
         backButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                timer.stop();
                 // Agregar aquí la lógica para volver atrás
                 frame.getContentPane().removeAll();
                 frame.add(startPanel, BorderLayout.CENTER);
                 frame.revalidate();
                 frame.repaint();
+                
                 reiniciarJuego();
+                
             }
         });
 
-        Font font1 = new Font("Monospaced", Font.BOLD, 16);
-        backButton.setFont(font1);
-        backButton.setOpaque(false);
-        backButton.setContentAreaFilled(false);
-        backButton.setBorderPainted(false);
-        backButton.setBorder(null);
-        backButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        Color textBotonModos = new Color(0, 225, 255, 100);
-        backButton.setForeground(textBotonModos.brighter());
-        
-        buttonDefaultPanel.add(backButton); // Agregar el botón de volver atrás al panel de botones
+            Font font1 = new Font("Monospaced", Font.BOLD, 16);
+            backButton.setFont(font1);
+            backButton.setOpaque(false);
+            backButton.setContentAreaFilled(false);
+            backButton.setBorderPainted(false);
+            backButton.setBorder(null);
+            backButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+            Color textBotonModos = new Color(0, 225, 255, 100);
+            backButton.setForeground(textBotonModos.brighter());
+            
+            buttonDefaultPanel.add(backButton); // Agregar el botón de volver atrás al panel de botones
 
-        gamePanel = new JPanel();
-        gamePanel.setLayout(new GridLayout(3, 3));
-        frame.add(gamePanel, BorderLayout.CENTER);
-        frame.add(buttonDefaultPanel, BorderLayout.NORTH);
+            gamePanel = new JPanel();
+            gamePanel.setLayout(new GridLayout(3, 3));
+            frame.add(gamePanel, BorderLayout.CENTER);
+            frame.add(buttonDefaultPanel, BorderLayout.NORTH);
 
-        inicializarBotones();
-        frame.revalidate();
-        frame.repaint();
-        JOptionPane.showMessageDialog(frame, "Ordenador 1 es X y Ordenador 2 es O");
-        ordenadorVsOrdenador();
+            ordenadorVsOrdenador();
+            frame.revalidate();
+            frame.repaint();
+            JOptionPane.showMessageDialog(frame, "Ordenador 1 es X y Ordenador 2 es O");
+            
     }
 
-
+    private boolean turnoX = true;
     //metodo logico para  jugador contra jugador
     private void jugadorVSjugador() {
         for (int i = 0; i < 9; i++) {
@@ -261,18 +266,28 @@ public class TresEnRayaGUI {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     if (tablero[index] == VACIO) {
-                        String marca = (turnoActual == JUGADOR1) ? "X" : "O"; // Determinar la marca (X o O) según el jugador actual
-                        button.setText(marca);
-                        tablero[index] = turnoActual;
-    
+                        if (turnoX) {
+                            button.setText("X");
+                            tablero[index] = JUGADOR1;
+                            turnoX = false; // Cambiar turno al siguiente jugador
+                        } else {
+                            button.setText("O");
+                            tablero[index] = JUGADOR2;
+                            turnoX = true; // Cambiar turno al siguiente jugador
+                        }
+                        
                         if (verificarGanador(JUGADOR1)) {
+                            // Si el jugador 1 gana, mostrar un mensaje de victoria
+                            
                             reiniciarJuego();
                         } else if (verificarGanador(JUGADOR2)) {
+                            // Si el jugador 2 gana, mostrar un mensaje de victoria
+                            
                             reiniciarJuego();
                         } else if (!quedanMovimientos()) {
+                            // Si no quedan movimientos, mostrar un mensaje de empate
+                            
                             reiniciarJuego();
-                        } else {
-                            turnoActual = (turnoActual == JUGADOR1) ? JUGADOR2 : JUGADOR1;
                         }
                     }
                 }
@@ -283,8 +298,10 @@ public class TresEnRayaGUI {
     }
     
     
+    
     //metodo logico para  jugador contra maquina
-    private void inicializarBotones() {
+    private void mvjugadorContraOrdenador() {
+       
         for (int i = 0; i < 9; i++) {
             JButton button = new JButton();
             button.setPreferredSize(new Dimension(100, 100));
@@ -293,6 +310,7 @@ public class TresEnRayaGUI {
             button.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
+                    
                     if (tablero[index] == VACIO) {
                         button.setText("X");
                         tablero[index] = JUGADOR1;
@@ -303,7 +321,7 @@ public class TresEnRayaGUI {
                                 verificarGanador(JUGADOR2);
                             } else {
                                 // Si no quedan movimientos, mostrar un mensaje de empate
-                                JOptionPane.showMessageDialog(frame, "¡Empate!");
+                                reiniciarJuego();
                             }
                         }
                     }
@@ -315,19 +333,21 @@ public class TresEnRayaGUI {
     }
 
     
-    
+    private Timer timer; //ponemos la variable timer fuera para que desde el método iniciarJuegoOrdenadorVsOrdenador() pueda acceder y parar el temporizador si volvemos atrás
+
     //método para juego de máquina contra máquina: simulacion de juego 
     private void ordenadorVsOrdenador() {
-        reiniciarJuego();
+       // Inicializar los botones para el juego
+    for (int i = 0; i < 9; i++) {
+        JButton button = new JButton();
+        button.setPreferredSize(new Dimension(100, 100));
+        button.setFont(new Font("Arial", Font.BOLD, 40));
+        gamePanel.add(button); // Agregar el botón al panel de juego
+        buttons[i] = button; // Agregar el botón al arreglo de botones para poder acceder a él más tarde
+    }
 
-        try {
-            Thread.sleep(500); // Pausa un segundo para que la interfaz gráfica tenga tiempo de actualizarse
-        } catch (InterruptedException ex) {
-            Thread.currentThread().interrupt();
-        }
-
-        Timer timer = new Timer(500, new ActionListener() {
-            int turno = JUGADOR1; // Iniciar con el turno del Jugador 1 (Ordenador 1)
+       timer = new Timer(1000, new ActionListener() {
+            int turno = JUGADOR1; // Inicia con el turno del Jugador 1 (Ordenador 1)
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -337,12 +357,14 @@ public class TresEnRayaGUI {
                     turno = (turno == JUGADOR1) ? JUGADOR2 : JUGADOR1; // Cambiar al siguiente jugador
                 } else {
                     ((Timer) e.getSource()).stop(); // Detener el temporizador si no quedan movimientos
-                    JOptionPane.showMessageDialog(frame, "¡Empate!"); // Mostrar mensaje de empate si no quedan movimientos
+                    return;
                 }
             }
         });
 
         timer.start(); // Iniciar el temporizador
+        
+        reiniciarJuego();
     }
 
 
@@ -360,6 +382,7 @@ public class TresEnRayaGUI {
         } else {
             buttons[pos].setText("O");
         }
+        return;
     }
 
     //verificamos si hay un ganador y cual es
