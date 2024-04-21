@@ -21,7 +21,7 @@ public class TresEnRayaGUI {
         initialize();
     }
 
-    private void initialize() {
+    private void initialize() { //iniciar panel de inicio 
         frame = new JFrame("Tres en Raya");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
@@ -42,16 +42,12 @@ public class TresEnRayaGUI {
         //Label del mensaje de bienvenido
         JLabel welcomeLabel = new JLabel("<html><center>Bienvenido al<br> Tres en Raya<br><br></center></html>", SwingConstants.CENTER);
         Font font1 = new Font("Monospaced", Font.BOLD, 30);
-        int red = 255;
-        int green = 0;
-        int blue = 0;
+
         // Crea un color con los componentes RGB
         Color textColor = new Color(0, 225, 255, 100);
         welcomeLabel.setForeground(textColor);
 
         welcomeLabel.setFont(font1);
-
-
         welcomePanel.add(welcomeLabel,gbc);
 
 
@@ -119,35 +115,133 @@ public class TresEnRayaGUI {
         frame.setVisible(true);
     }
 
+
+/**
+*métodos y lógica del jeugo 
+**/
+
+    //metodo para iniciar juego jugador contra jugador
     private void iniciarJuegoContraJugador() {
+
         frame.getContentPane().removeAll();
         frame.setLayout(new BorderLayout());
+        JPanel buttonDefaultPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT)); // Crear un panel para los botones
+        buttonDefaultPanel.setBackground(Color.BLACK); 
+       
+        JButton backButton = new JButton("Volver a modos"); // Crear el botón de volver atrás 
+        backButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                // Agregar aquí la lógica para volver atrás
+                frame.getContentPane().removeAll();
+                frame.add(startPanel, BorderLayout.CENTER);
+                frame.revalidate();
+                frame.repaint();
+                reiniciarJuego();
+            }
+        });
+
+        Font font1 = new Font("Monospaced", Font.BOLD, 16);
+        backButton.setFont(font1);
+        backButton.setOpaque(false);
+        backButton.setContentAreaFilled(false);
+        backButton.setBorderPainted(false);
+        backButton.setBorder(null);
+        backButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        Color textBotonModos = new Color(0, 225, 255, 100);
+        backButton.setForeground(textBotonModos.brighter());
+        
+        buttonDefaultPanel.add(backButton); // Agregar el botón de volver atrás al panel de botones
+
         gamePanel = new JPanel();
         gamePanel.setLayout(new GridLayout(3, 3));
         frame.add(gamePanel, BorderLayout.CENTER);
-        jugadorVSjugador(); //ERROR jugarContraOtroJugador()
+        frame.add(buttonDefaultPanel, BorderLayout.NORTH);
+        jugadorVSjugador(); 
         frame.revalidate();
         frame.repaint();
+        JOptionPane.showMessageDialog(frame, "Jugador 1 es O y Jugador 2 es X");
     }
 
+    //Método para iniciar juego jugador contra PC
     private void iniciarJuegoContraOrdenador() {
+
         frame.getContentPane().removeAll();
         frame.setLayout(new BorderLayout());
+        JPanel buttonDefaultPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT)); // Crear un panel para los botones
+        buttonDefaultPanel.setBackground(Color.BLACK); 
+       
+        JButton backButton = new JButton("Volver a modos"); // Crear el botón de volver atrás 
+        backButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                // Agregar aquí la lógica para volver atrás
+                frame.getContentPane().removeAll();
+                frame.add(startPanel, BorderLayout.CENTER);
+                frame.revalidate();
+                frame.repaint();
+                reiniciarJuego();
+            }
+        });
+        //caracteristicas del boton: letra, tamaño, transparencia...
+        Font font1 = new Font("Monospaced", Font.BOLD, 16); 
+        backButton.setFont(font1);
+        backButton.setOpaque(false);
+        backButton.setContentAreaFilled(false);
+        backButton.setBorderPainted(false);
+        backButton.setBorder(null);
+        backButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR)); 
+        Color textBotonModos = new Color(0, 225, 255, 100);
+        backButton.setForeground(textBotonModos.brighter());
+        
+        buttonDefaultPanel.add(backButton); // Agregar el botón de volver atrás al panel de botones
+
         gamePanel = new JPanel();
         gamePanel.setLayout(new GridLayout(3, 3));
         frame.add(gamePanel, BorderLayout.CENTER);
+        frame.add(buttonDefaultPanel, BorderLayout.NORTH);
+
         inicializarBotones();
         frame.revalidate();
         frame.repaint();
         JOptionPane.showMessageDialog(frame, "Jugador es X y Ordenador es O");
     }
 
+    //Método para iniciar juego PC contra PC
     private void iniciarJuegoOrdenadorVsOrdenador() {
+        
         frame.getContentPane().removeAll();
         frame.setLayout(new BorderLayout());
+        JPanel buttonDefaultPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT)); // Crear un panel para los botones
+        buttonDefaultPanel.setBackground(Color.BLACK); 
+       
+        JButton backButton = new JButton("Volver a modos"); // Crear el botón de volver atrás 
+        backButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                // Agregar aquí la lógica para volver atrás
+                frame.getContentPane().removeAll();
+                frame.add(startPanel, BorderLayout.CENTER);
+                frame.revalidate();
+                frame.repaint();
+                reiniciarJuego();
+            }
+        });
+
+        Font font1 = new Font("Monospaced", Font.BOLD, 16);
+        backButton.setFont(font1);
+        backButton.setOpaque(false);
+        backButton.setContentAreaFilled(false);
+        backButton.setBorderPainted(false);
+        backButton.setBorder(null);
+        backButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        Color textBotonModos = new Color(0, 225, 255, 100);
+        backButton.setForeground(textBotonModos.brighter());
+        
+        buttonDefaultPanel.add(backButton); // Agregar el botón de volver atrás al panel de botones
+
         gamePanel = new JPanel();
         gamePanel.setLayout(new GridLayout(3, 3));
         frame.add(gamePanel, BorderLayout.CENTER);
+        frame.add(buttonDefaultPanel, BorderLayout.NORTH);
+
         inicializarBotones();
         frame.revalidate();
         frame.repaint();
@@ -156,7 +250,7 @@ public class TresEnRayaGUI {
     }
 
 
-
+    //metodo logico para  jugador contra jugador
     private void jugadorVSjugador() {
         for (int i = 0; i < 9; i++) {
             JButton button = new JButton();
@@ -170,28 +264,26 @@ public class TresEnRayaGUI {
                         String marca = (turnoActual == JUGADOR1) ? "X" : "O"; // Determinar la marca (X o O) según el jugador actual
                         button.setText(marca);
                         tablero[index] = turnoActual;
-                        verificarGanador(JUGADOR1);
-                        if (!verificarGanador(JUGADOR1)) {
+    
+                        if (verificarGanador(JUGADOR1)) {
+                            reiniciarJuego();
+                        } else if (verificarGanador(JUGADOR2)) {
+                            reiniciarJuego();
+                        } else if (!quedanMovimientos()) {
+                            reiniciarJuego();
+                        } else {
                             turnoActual = (turnoActual == JUGADOR1) ? JUGADOR2 : JUGADOR1;
-                            button.setText(marca);
-                            // Verificar si quedan movimientos antes de que el Ordenador haga su movimiento
-                            if (quedanMovimientos()) {
-                                verificarGanador(JUGADOR2);
-                            } else {
-                                // Si no quedan movimientos, mostrar un mensaje de empate
-                                JOptionPane.showMessageDialog(frame, "¡Empate!");
-                            }
                         }
                     }
                 }
             });
             buttons[i] = button;
             gamePanel.add(button);
-
         }
     }
-
-
+    
+    
+    //metodo logico para  jugador contra maquina
     private void inicializarBotones() {
         for (int i = 0; i < 9; i++) {
             JButton button = new JButton();
@@ -222,25 +314,9 @@ public class TresEnRayaGUI {
         }
     }
 
-
-    private void moverOrdenador(int jugador) {
-        Random rand = new Random();
-        int pos;
-        do {
-            pos = rand.nextInt(9);
-        } while (tablero[pos] != VACIO);
-
-        String marca = (jugador == JUGADOR1) ? "X" : "O"; // Determinar la marca (X o O) según el jugador
-        tablero[pos] = jugador;
-
-        if (jugador == JUGADOR1) {
-            buttons[pos].setText("X");
-        } else {
-            buttons[pos].setText("O");
-        }
-    }
-
-
+    
+    
+    //método para juego de máquina contra máquina: simulacion de juego 
     private void ordenadorVsOrdenador() {
         reiniciarJuego();
 
@@ -270,7 +346,23 @@ public class TresEnRayaGUI {
     }
 
 
+    private void moverOrdenador(int jugador) {
+        Random rand = new Random();
+        int pos;
+        do {
+            pos = rand.nextInt(9);
+        } while (tablero[pos] != VACIO);
 
+        tablero[pos] = jugador;
+
+        if (jugador == JUGADOR1) {
+            buttons[pos].setText("X");
+        } else {
+            buttons[pos].setText("O");
+        }
+    }
+
+    //verificamos si hay un ganador y cual es
     private boolean verificarGanador(int jugador) {
         for (int i = 0; i < 3; i++) {
             if (tablero[i] == jugador && tablero[i + 3] == jugador && tablero[i + 6] == jugador) {
@@ -319,8 +411,7 @@ public class TresEnRayaGUI {
         }
     }
 
-
-
+    //verificar si hay movimientos aun disponibles para seguir jugando
     private boolean quedanMovimientos() {
         for (int i = 0; i < tablero.length; i++) {
             if (tablero[i] == VACIO) {
