@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1a17057e-2566-4848-b09e-07509c563a3c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AnimalMenuFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClinicaVeterinaria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClinicaVeterinariaGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EspeciePajaro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EspecieReptil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gato.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GatoFormulario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ListaAnimalesFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModificarComentarioForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pajaro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PajaroFormulario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Perro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PerroFormulario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RazaGato.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RazaPerro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reptil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReptilFormulario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inicio.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AppTresEnRaya.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TresEnRayaApp/TresEnRayaGUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TresEnRayaApp/TresEnRayaGUI$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TresEnRayaApp/TresEnRayaGUI$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TresEnRayaApp/TresEnRayaGUI$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TresEnRayaApp/TresEnRayaGUI$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TresEnRayaApp/TresEnRayaGUI$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TresEnRayaApp/TresEnRayaGUI$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TresEnRayaApp/TresEnRayaGUI$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TresEnRayaApp/TresEnRayaGUI$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TresEnRayaApp/TresEnRayaGUI$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TresEnRayaApp/TresEnRayaGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TresEnRayaApp/TresEnRayaGUI.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2frv8Dl8Ehz6gXTO6gGiZu71dKU" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ClinicaVeterinariaGUI.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FichaAnimal.executor&quot;: &quot;Run&quot;,
+    &quot;Application.GatoFormulario.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PerroFormulario.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/RepositoriosGit/RepoPRG/PRG/VETERINARIA&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\RepositoriosGit\RepoPRG\PRG\R06_VETERINARIA" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ClinicaVeterinariaGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ClinicaVeterinariaGUI" />
+      <module name="R06_VETERINARIA" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ClinicaVeterinariaGUI" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1a17057e-2566-4848-b09e-07509c563a3c" name="Changes" comment="" />
+      <created>1714571849275</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714571849275</updated>
+      <workItem from="1714571850296" duration="2097000" />
+      <workItem from="1714573965159" duration="2454000" />
+      <workItem from="1714576438925" duration="14659000" />
+      <workItem from="1714591257483" duration="12774000" />
+      <workItem from="1714606419042" duration="1224000" />
+      <workItem from="1714607657603" duration="5378000" />
+      <workItem from="1714613077443" duration="9548000" />
+      <workItem from="1714622680805" duration="1143000" />
+      <workItem from="1714646805936" duration="16361000" />
+      <workItem from="1714672197016" duration="327000" />
+      <workItem from="1714672658535" duration="831000" />
+      <workItem from="1714674924501" duration="14000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

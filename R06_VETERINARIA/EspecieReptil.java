@@ -1,2 +1,6 @@
-package PACKAGE_NAME;public enum EspecieReptil {
+public enum EspecieReptil {
+    Tortuga,
+    Iguana,
+    DragonDeComodo
+
 }

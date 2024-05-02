@@ -1,2 +1,8 @@
-package PACKAGE_NAME;public enum RazaGato {
+public enum RazaGato {
+
+    Comun,
+    Siames,
+    Persa,
+    Angora,
+    ScottishFold
 }

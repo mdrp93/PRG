@@ -1,2 +1,7 @@
-package PACKAGE_NAME;public enum RazaPerro {
+public enum RazaPerro {
+    PastorAleman,
+    Husky,
+    FoxTerrier,
+    Dalmata,
+    SanBernardo
 }

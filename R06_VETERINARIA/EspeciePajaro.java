@@ -1,2 +1,9 @@
-package PACKAGE_NAME;public enum EspeciePajaro {
+
+
+public enum EspeciePajaro {
+
+    Canario,
+    Periquito,
+    Agapornis
+
 }

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="AppTresEnRaya">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/AppTresEnRaya.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,3 +1,5 @@
+/*MENU INICIAL EN CONSOLA*/
+
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 import java.util.Scanner;
@@ -174,8 +176,6 @@ public class Main {
             System.out.println("Error: Formato de fecha de nacimiento incorrecto. Debe ser yyyy-MM-dd. Ej.: 2024-05-26");
         }
     }
-
-
 
 
     private static void agregarReptil(ClinicaVeterinaria clinica, Scanner scanner) {
