@@ -4,41 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a17057e-2566-4848-b09e-07509c563a3c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AnimalMenuFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClinicaVeterinaria.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClinicaVeterinariaGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EspeciePajaro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EspecieReptil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gato.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GatoFormulario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ListaAnimalesFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Main.TXT" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModificarComentarioForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pajaro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PajaroFormulario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Perro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PerroFormulario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RazaGato.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RazaPerro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reptil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReptilFormulario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicio.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AppTresEnRaya.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TresEnRayaApp/TresEnRayaGUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TresEnRayaApp/TresEnRayaGUI$10.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TresEnRayaApp/TresEnRayaGUI$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TresEnRayaApp/TresEnRayaGUI$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TresEnRayaApp/TresEnRayaGUI$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TresEnRayaApp/TresEnRayaGUI$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TresEnRayaApp/TresEnRayaGUI$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TresEnRayaApp/TresEnRayaGUI$7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TresEnRayaApp/TresEnRayaGUI$8.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TresEnRayaApp/TresEnRayaGUI$9.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TresEnRayaApp/TresEnRayaGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TresEnRayaApp/TresEnRayaGUI.java" beforeDir="false" />
-    </list>
+    <list default="true" id="1a17057e-2566-4848-b09e-07509c563a3c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,29 +36,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ClinicaVeterinariaGUI.executor&quot;: &quot;Run&quot;,
-    &quot;Application.FichaAnimal.executor&quot;: &quot;Run&quot;,
-    &quot;Application.GatoFormulario.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.PerroFormulario.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/RepositoriosGit/RepoPRG/PRG/VETERINARIA&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ClinicaVeterinariaGUI.executor": "Run",
+    "Application.FichaAnimal.executor": "Run",
+    "Application.GatoFormulario.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.PerroFormulario.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/RepositoriosGit/RepoPRG/PRG/R1_videojuego",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\RepositoriosGit\RepoPRG\PRG\R06_VETERINARIA" />
@@ -140,6 +106,7 @@
       <workItem from="1714672197016" duration="327000" />
       <workItem from="1714672658535" duration="831000" />
       <workItem from="1714674924501" duration="14000" />
+      <workItem from="1714675974807" duration="19000" />
     </task>
     <servers />
   </component>
