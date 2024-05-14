@@ -1,0 +1,58 @@
+//codigo inicial del main
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class BuscarTextoMain {
+
+    public static void main(String[] args) {
+        if (args.length != 3) {
+            System.out.println("Error: Se requieren tres parámetros - ruta del archivo, texto a buscar entre tags, y si se incluyen los delimitadores ('con' o 'sin').");
+            System.out.println("Para ejecutar el programa, utiliza una estructura similar a esta: java -jar R3_BUSCATEXTO.jar src/cambio.html h1 con");
+            System.exit(1);
+        }
+    
+        // Crear una instancia de BuscaTexto
+        BuscaTexto buscador = new BuscaTexto();
+    
+        String archivo = args[0]; // Ruta del archivo
+        String textoABuscar = args[1]; // Texto a buscar entre tags
+        String incluirDelimitadores = args[2]; // Indica si se deben incluir los delimitadores
+    
+        // Cargar el contenido del archivo en el objeto BuscaTexto
+        buscador.cargaFichero(archivo);
+        buscador.busca(textoABuscar);
+        
+        // Buscar y extraer el texto comprendido entre los tags ">" y "<"
+        String delimitador1 = ">";
+        String delimitador2 = "<";
+        String delimitador3 = "<";
+        String delimitador4 =">";
+        String textoExtraido = null;
+        String textoExtraidoCon = null;
+    
+        if (incluirDelimitadores.equalsIgnoreCase("con")) {
+            textoExtraidoCon = buscador.extraeCadenaConDelim(delimitador3, delimitador4);
+        } else if (incluirDelimitadores.equalsIgnoreCase("sin")) {
+            textoExtraido = buscador.extraeCadena(delimitador1, delimitador2);
+        } else {
+            System.out.println("El tercer parámetro debe ser 'con' o 'sin'.");
+            System.exit(1);
+        }
+    
+        // Imprimir el texto extraído
+        if (textoExtraidoCon != null) {
+            System.out.println("Texto extraído con delimitadores: " + textoExtraidoCon);
+        } else if (textoExtraido != null) {
+            System.out.println("Texto extraído sin delimitadores: " + textoExtraido);
+        } else {
+            System.out.println("No se encontraron los delimitadores '>' y '<' en el texto.");
+        }
+    }
+}
+    
+
+
+
