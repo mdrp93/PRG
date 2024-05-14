@@ -12,9 +12,9 @@
 - `Finality`: The program allows extracting information from a text.
 
 ## Sections of this README
-
+RECOMENDATION
 ***
-  - [Prerequisites 📋](#Prerequisites-📋-a-namepre-a)
+  - [Prerequisites 📋 ](#prerequisites--a-nameprea)
   - [Run files 🔧 ](#run-files--a-nameruna)
   - [Tools 🛠️ ](#tools--a-nametoolsa)
   - [Libraries 📚 ](#libraries--a-namelibrariesa)
@@ -23,7 +23,7 @@
   - [Auth@r ✒️ ](#authr--a-nameautora)
   - [License 📄](#license-a-namelicensea)
 
-## Prerequisites 📋<a name="pre"></a>
+## Prerequisites 📋 <a name="pre"></a>
 ***
 
 _Things you need to run the project_
@@ -33,7 +33,7 @@ Java Development Kit (JDK) installed on your machine
 IDE (Integrated Development Environment) like IntelliJ IDEA or VScode
 ```
 
-## Run files 🔧<a name="run"></a>
+## Run files 🔧 <a name="run"></a>
 
 ***
 _Step-by-step guide on how to run the program_
