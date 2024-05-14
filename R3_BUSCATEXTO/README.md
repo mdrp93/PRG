@@ -14,7 +14,7 @@
 ## Sections of this README
 RECOMENDATION
 ***
-  - [Prerequisites 📋](#prerequisites--a-nameprea)
+  - [Prerequisites 📋](#Prerequisites-📋-a-namepre-a)
   - [Run files 🔧 ](#run-files--a-nameruna)
   - [Tools 🛠️ ](#tools--a-nametoolsa)
   - [Libraries 📚 ](#libraries--a-namelibrariesa)
@@ -23,7 +23,7 @@ RECOMENDATION
   - [Auth@r ✒️ ](#authr--a-nameautora)
   - [License 📄](#license-a-namelicensea)
 
-## Prerequisites 📋
+## Prerequisites 📋<a name="pre"></a>
 ***
 
 _Things you need to run the project_
@@ -33,7 +33,7 @@ Java Development Kit (JDK) installed on your machine
 IDE (Integrated Development Environment) like IntelliJ IDEA or VScode
 ```
 
-## Run files 🔧 <a name="run"></a>
+## Run files 🔧<a name="run"></a>
 
 ***
 _Step-by-step guide on how to run the program_
