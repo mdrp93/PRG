@@ -9,7 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01ef97d2-cf46-4a06-83f1-830b5ae20fd2" name="Changes" comment="" />
+    <list default="true" id="01ef97d2-cf46-4a06-83f1-830b5ae20fd2" name="Changes" comment="README.md changes">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +30,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "mdrp93"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/mdrp93/PRG.git",
+    "accountId": "69537a07-e5f7-487b-a2cc-6da2cfcb0a9d"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/BuscarTextoGUI.java" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -246,7 +262,17 @@
       <workItem from="1715704481783" duration="393000" />
       <workItem from="1715704966739" duration="252000" />
       <workItem from="1715705239782" duration="149000" />
+      <workItem from="1715705901260" duration="607000" />
     </task>
+    <task id="LOCAL-00001" summary="README.md changes">
+      <option name="closed" value="true" />
+      <created>1715706428683</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715706428683</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,5 +280,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="buscatexto appBuscaTexto" />
+    <MESSAGE value="README.md changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="README.md changes" />
   </component>
 </project>

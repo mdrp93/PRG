@@ -12,7 +12,7 @@
 - `Finality`: The program allows extracting information from a text.
 
 ## Sections of this README
-RECOMENDATION
+
 ***
   - [Prerequisites 📋](#prerequisites--a-nameprea)
   - [Run files 🔧 ](#run-files--a-nameruna)
@@ -23,7 +23,7 @@ RECOMENDATION
   - [Auth@r ✒️ ](#authr--a-nameautora)
   - [License 📄](#license-a-namelicensea)
 
-## Prerequisites 📋
+## Prerequisites 📋<a name="pre"></a>
 ***
 
 _Things you need to run the project_
