@@ -1,3 +1,7 @@
+***
+#### ⚠️ The recommendation is to open this README file in a Markdown editor or in IntelliJ IDEA, as Visual Studio Code sometimes encounters issues with certain links and other components of the file in its preview mode. ⚠️
+***
+
 # PROJECT: TEXT FINDER (BuscaTexto) <a name="top"></a>
 
 <p align.text="left">
@@ -10,7 +14,7 @@
 ## Sections of this README
 RECOMENDATION
 ***
-  - [Prerequisites 📋 ](#prerequisites--a-nameprea)
+  - [Prerequisites 📋](#prerequisites--a-nameprea)
   - [Run files 🔧 ](#run-files--a-nameruna)
   - [Tools 🛠️ ](#tools--a-nametoolsa)
   - [Libraries 📚 ](#libraries--a-namelibrariesa)
@@ -19,7 +23,7 @@ RECOMENDATION
   - [Auth@r ✒️ ](#authr--a-nameautora)
   - [License 📄](#license-a-namelicensea)
 
-## Prerequisites 📋 <a name="pre"></a>
+## Prerequisites 📋
 ***
 
 _Things you need to run the project_
