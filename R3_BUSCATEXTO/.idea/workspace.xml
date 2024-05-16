@@ -9,11 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01ef97d2-cf46-4a06-83f1-830b5ae20fd2" name="Changes" comment="README.md changes">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="01ef97d2-cf46-4a06-83f1-830b5ae20fd2" name="Changes" comment="README.md changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,18 +26,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "mdrp93"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;mdrp93&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/mdrp93/PRG.git",
-    "accountId": "69537a07-e5f7-487b-a2cc-6da2cfcb0a9d"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/mdrp93/PRG.git&quot;,
+    &quot;accountId&quot;: &quot;69537a07-e5f7-487b-a2cc-6da2cfcb0a9d&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/BuscarTextoGUI.java" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -263,6 +259,7 @@
       <workItem from="1715704966739" duration="252000" />
       <workItem from="1715705239782" duration="149000" />
       <workItem from="1715705901260" duration="607000" />
+      <workItem from="1715707364730" duration="48000" />
     </task>
     <task id="LOCAL-00001" summary="README.md changes">
       <option name="closed" value="true" />
