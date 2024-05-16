@@ -1,0 +1,228 @@
+/*MENU INICIAL EN CONSOLA*/
+
+import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        ClinicaVeterinaria clinica = new ClinicaVeterinaria();
+        Scanner scanner = new Scanner(System.in);
+
+        int opcion;
+        do {
+            System.out.println("----- Menú -----");
+            System.out.println("1. Añadir Perro");
+            System.out.println("2. Añadir Gato");
+            System.out.println("3. Añadir Pájaro");
+            System.out.println("4. Añadir Reptil");
+            System.out.println("5. Modificar comentario de un animal");
+            System.out.println("6. Mostrar lista de animales");
+            System.out.println("7. Salir");
+            System.out.print("Elige una opción: ");
+
+            // Verificar si el siguiente token es un entero
+            if (scanner.hasNextInt()) {
+                opcion = scanner.nextInt();
+                scanner.nextLine(); // Limpiar el buffer de entrada
+            } else {
+                System.out.println("Error: Debes ingresar un número entero.");
+                scanner.nextLine(); // Limpiar el buffer de entrada
+                opcion = -1; // Establecer una opción inválida para continuar el bucle
+            }
+
+            switch (opcion) {
+                case 1:
+                    agregarPerro(clinica, scanner);
+                    break;
+                case 2:
+                    agregarGato(clinica, scanner);
+                    break;
+                case 3:
+                    agregarPajaro(clinica, scanner);
+                    break;
+                case 4:
+                    agregarReptil(clinica, scanner);
+                    break;
+                case 5:
+                    modificarComentario(clinica, scanner);
+                    break;
+                case 6:
+                    System.out.println(clinica);
+                    break;
+                case 7:
+                    System.out.println("Saliendo del programa...");
+                    break;
+                default:
+                    System.out.println("Opción no válida. Por favor, selecciona una opción válida.");
+            }
+        } while (opcion != 7);
+
+    }
+        private static void agregarPerro(ClinicaVeterinaria clinica, Scanner scanner) {
+        try {
+            System.out.println("Introduce los datos del perro:");
+            String nombrePerro;
+                do {
+                    System.out.print("Nombre: ");
+                    nombrePerro = scanner.nextLine();
+                    if (nombrePerro.isEmpty()) {
+                        System.out.println("Error: El nombre no puede estar vacío. Por favor, ingrese un nombre válido.");
+                    }
+                } while (nombrePerro.isEmpty());
+            System.out.print("Raza (PastorAleman, Husky, FoxTerrier, Dalmata, SanBernardo): ");
+            RazaPerro razaPerro = RazaPerro.valueOf(scanner.nextLine());
+            System.out.print("Fecha de nacimiento (yyyy-MM-dd): ");
+            LocalDate fechaNacimientoPerro = LocalDate.parse(scanner.nextLine());
+            double pesoPerro;
+            while (true) {
+                try {
+                    System.out.print("Peso: ");
+                    pesoPerro = Double.parseDouble(scanner.nextLine());
+                    break; // Salir del bucle si el peso se parsa correctamente
+                } catch (NumberFormatException e) {
+                    System.out.println("Error: Formato de peso incorrecto. Debe ser un número válido.");
+                }
+            }
+
+            System.out.print("Microchip: ");
+            String microchipPerro = scanner.nextLine();
+            System.out.print("Comentarios: ");
+            String comentariosPerro = scanner.nextLine();
+            clinica.insertaAnimal(new Perro(nombrePerro, razaPerro, fechaNacimientoPerro, pesoPerro, microchipPerro, comentariosPerro));
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error: La raza ingresada no es correcta. Por favor, ingrese el nombre de la raza ej.: PastorAleman");
+        } catch (DateTimeParseException e) {
+            System.out.println("Error: Formato de fecha de nacimiento incorrecto. Debe ser yyyy-MM-dd. Ej.: 2024-05-26");
+        }
+    }
+
+        private static void agregarGato (ClinicaVeterinaria clinica, Scanner scanner) {
+            try {
+                System.out.println("Introduce los datos del gato:");
+                String nombreGato;
+                    do {
+                        System.out.print("Nombre: ");
+                        nombreGato = scanner.nextLine();
+                        if (nombreGato.isEmpty()) {
+                            System.out.println("Error: El nombre no puede estar vacío. Por favor, ingrese un nombre válido.");
+                        }
+                    } while (nombreGato.isEmpty());
+                System.out.print("Raza (Comun, Siames, Persa, Angora, ScottishFold): ");
+                RazaGato razaGato = RazaGato.valueOf(scanner.nextLine());
+                System.out.print("Fecha de nacimiento (yyyy-MM-dd): ");
+                LocalDate fechaNacimientoGato = LocalDate.parse(scanner.nextLine());
+                double pesoGato;
+                while (true) {
+                    try {
+                        System.out.print("Peso: ");
+                        pesoGato = Double.parseDouble(scanner.nextLine());
+                        break; // Salir del bucle si el peso se parsea correctamente
+                    } catch (NumberFormatException e) {
+                        System.out.println("Error: Formato de peso incorrecto. Debe ser un número válido. Ej.: 10 o 10.5");
+                    }
+                }
+
+                System.out.print("Microchip: ");
+                String microchipGato = scanner.nextLine();
+                System.out.print("Comentarios: ");
+                String comentariosGato = scanner.nextLine();
+                clinica.insertaAnimal(new Gato(nombreGato, razaGato, fechaNacimientoGato, pesoGato, microchipGato, comentariosGato));
+            } catch (IllegalArgumentException e) {
+                System.out.println("Error: La raza ingresada no es correcta. Por favor, ingrese el nombre de la raza ej.: ScottishFold");
+            } catch (DateTimeParseException e) {
+                System.out.println("Error: Formato de fecha de nacimiento incorrecto. Debe ser yyyy-MM-dd. Ej.: 2024-05-26");
+            }
+        }
+
+
+    private static void agregarPajaro(ClinicaVeterinaria clinica, Scanner scanner) {
+        try {
+            System.out.println("Introduce los datos del pájaro:");
+            String nombrePajaro;    //validamos que el nombre no este vacio
+                do {
+                    System.out.print("Nombre: ");
+                    nombrePajaro = scanner.nextLine();
+                    if (nombrePajaro.isEmpty()) {
+                        System.out.println("Error: El nombre no puede estar vacío. Por favor, ingrese un nombre válido.");
+                    }
+                } while (nombrePajaro.isEmpty());
+            System.out.print("Especie (Canario, Periquito, Agapornis): ");
+            EspeciePajaro especiePajaro = EspeciePajaro.valueOf(scanner.nextLine());
+            System.out.print("Fecha de nacimiento (yyyy-MM-dd): ");
+            LocalDate fechaNacimientoPajaro = LocalDate.parse(scanner.nextLine());
+            double pesoPajaro;
+                while (true) {
+                    try {
+                        System.out.print("Peso: ");
+                        pesoPajaro = Double.parseDouble(scanner.nextLine());
+                        break; // Salir del bucle si el peso se pasa correctamente
+                    } catch (NumberFormatException e) {
+                        System.out.println("Error: Formato de peso incorrecto. Debe ser un número válido. Ej.: 10 o 10.5");
+                    }
+                }
+
+            System.out.print("¿Es cantor? (si/no): ");
+            String respuestaCantor = scanner.nextLine();
+            boolean esCantor = respuestaCantor.equalsIgnoreCase("si");
+
+            System.out.print("Comentarios: ");
+            String comentariosPajaro = scanner.nextLine();
+            clinica.insertaAnimal(new Pajaro(nombrePajaro, especiePajaro, fechaNacimientoPajaro, pesoPajaro, esCantor, comentariosPajaro));
+
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error: La especie ingresada no es correcta. Por favor, ingrese el nombre de la especie ej.: Canario");
+        } catch (DateTimeParseException e) {
+            System.out.println("Error: Formato de fecha de nacimiento incorrecto. Debe ser yyyy-MM-dd. Ej.: 2024-05-26");
+        }
+    }
+
+
+    private static void agregarReptil(ClinicaVeterinaria clinica, Scanner scanner) {
+        System.out.println("Introduce los datos del reptil:");
+        String nombreReptil;
+            do {
+                System.out.print("Nombre: ");
+                nombreReptil = scanner.nextLine();
+                if (nombreReptil.isEmpty()) {
+                    System.out.println("Error: El nombre no puede estar vacío. Por favor, ingrese un nombre válido.");
+                }
+            } while (nombreReptil.isEmpty());
+        System.out.print("Especie (Tortuga, Iguana, DragonDeComodo): ");
+        EspecieReptil especieReptil = EspecieReptil.valueOf(scanner.nextLine());
+        System.out.print("Fecha de nacimiento (yyyy-MM-dd): ");
+        LocalDate fechaNacimientoReptil = LocalDate.parse(scanner.nextLine());
+        double pesoReptil;
+        while (true) {
+            try {
+                System.out.print("Peso: ");
+                pesoReptil = Double.parseDouble(scanner.nextLine());
+                break; // Salir del bucle si el peso se parsea correctamente
+            } catch (NumberFormatException e) {
+                System.out.println("Error: Formato de peso incorrecto. Debe ser un número válido. Ej.: 10 o 10.5");
+            }
+        }
+
+        System.out.print("¿Es venenoso? (true/false): ");
+        boolean esVenenoso = scanner.nextBoolean();
+        scanner.nextLine(); // Limpiar el buffer de entrada
+        System.out.print("Comentarios: ");
+        String comentariosReptil = scanner.nextLine();
+        clinica.insertaAnimal(new Reptil(nombreReptil, especieReptil, fechaNacimientoReptil, pesoReptil, esVenenoso, comentariosReptil));
+    }
+
+
+    private static void modificarComentario(ClinicaVeterinaria clinica, Scanner scanner) {
+        System.out.print("Introduce el nombre del animal cuyo comentario quieres modificar: ");
+        String nombreAnimal = scanner.nextLine();
+        Animal animal = clinica.buscaAnimal(nombreAnimal);
+        if (animal != null) {
+            System.out.print("Nuevo comentario: ");
+            String nuevoComentario = scanner.nextLine();
+            clinica.modificaComentarioAnimal(nombreAnimal, nuevoComentario);
+            System.out.println("Comentario modificado con éxito.");
+        } else {
+            System.out.println("No se encontró ningún animal con ese nombre.");
+        }
+    }
+}
