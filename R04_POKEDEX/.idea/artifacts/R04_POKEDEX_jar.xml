@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="R04_POKEDEX:jar">
+    <output-path>$PROJECT_DIR$</output-path>
+    <root id="archive" name="R04_POKEDEX.jar">
+      <element id="module-output" name="R04_POKEDEX" />
+    </root>
+  </artifact>
+</component>
